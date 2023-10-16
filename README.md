@@ -6,7 +6,7 @@ Simple .dotfiles Hyprland and Wayland bar setup
 ![image](https://github.com/victorguidi/victorguidi-HyprlandSetup/assets/77369161/3eaacf70-20b9-48cc-938b-799ecbdb1458)
 
 ### Clipboard
-![image](https://github.com/victorguidi/victorguidi-HyprlandSetup/assets/77369161/f9f73c46-80eb-44aa-b68b-c1c90affe67c)
+![image](https://github.com/victorguidi/victorguidi-HyprlandSetup/assets/77369161/4c44bd36-aa3d-4b21-900f-9567db6f7b31)
 
 ## Color Picker
 ![image](https://github.com/victorguidi/victorguidi-HyprlandSetup/assets/77369161/2fcc0756-a236-407a-958e-0ccb44a4b79c)
