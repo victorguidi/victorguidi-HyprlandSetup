@@ -1,4 +1,5 @@
 return {
+  "ThePrimeagen/harpoon",
   { "mg979/vim-visual-multi", enabled = true },
   {
     "EdenEast/nightfox.nvim",

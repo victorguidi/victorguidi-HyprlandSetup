@@ -1,0 +1,33 @@
+set scrolloff=5
+set number relativenumber
+set ideajoin
+set surround
+set NERDTree
+set multiple-cursors
+set clipboard+=unnamed
+set incsearch
+
+let mapleader = " "
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" Plugins
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+" Mappings
+map <S-h> :action PreviousTab<CR>
+map <S-l> :action NextTab<CR>
+nnoremap <leader>ss :action FileStructurePopup<CR>
+nnoremap <leader><space> :action GotoFile<CR>
+nnoremap <leader>/ :action FindInPath<CR>
+map <C-e> :NERDTreeToggle <CR>
+" Navigate over NerdTree
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
+
+
+
