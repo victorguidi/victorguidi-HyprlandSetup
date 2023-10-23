@@ -42,7 +42,7 @@ else
 	if [[ ${status} == "Playing" ]]; then
 		option_1="▶"
 	else
-		option_1="▶"
+		option_1="❚❚"
 	fi
 	option_2="■"
 	option_3="⏮"
