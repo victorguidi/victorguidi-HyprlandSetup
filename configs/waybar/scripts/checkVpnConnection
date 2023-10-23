@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if pgrep openfortivpn >/dev/null; then
+	echo 
+else
+	echo 󰅤
+fi

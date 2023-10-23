@@ -48,7 +48,6 @@ install_stage=(
 	slurp
 	thunar
 	btop
-	brave-bin
 	mpv
 	pamixer
 	flatpak
@@ -296,6 +295,8 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
 	echo -e "$CNT - Enabling docker"
 	systemctl --user enable --now docker.socket
 	systemctl --user enable --now docker.service
+	sudo sed -E -i 's/:[0-9]+:/:165536:/; s/:[0-9]+:/:65536:/' /etc/subuid
+	sudo sed -E -i 's/:[0-9]+:/:165536:/; s/:[0-9]+:/:65536:/' /etc/subgid
 
 	# VM stuff
 	echo -e "$CNT - Configuring VM stuff (You must have KVM enabled and I assume you are using a AMD CPU, else it wont work :)"
@@ -326,10 +327,25 @@ read -rep $'[\e[1;33mACTION\e[0m] - Would you like to copy config files? (y,n) '
 if [[ $CFG == "Y" || $CFG == "y" ]]; then
 	echo -e "$CNT - Copying config files..."
 
-	# copy the configs, scripts and other to directory
+	# copy the configs, scripts and other to directory and zshrc
 	cp -R ./configs/* ~/.config/
 	cp -R ./.scripts/ ~/
 	cp -R ./.bgimages/ ~/
+	cp ./.zshrc ~/
+
+	# Install Oh-my-zsd
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+	# Adding auto completion and syntax-highlighting
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+	source $HOME/.zshrc
+
+	# Install Nodejs for nvim configuration and because you will probably need one day
+	asdf plugin add nodejs
+	asdf install nodejs latest
+	asdf global nodejs latest
 
 	# add the Nvidia env file to the config (if needed)
 	if [[ "$ISNVIDIA" == true ]]; then
@@ -359,6 +375,11 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
 	gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
 	gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
 fi
+
+echo -e "$CNT - Cleaning logs from timeshift backups"
+sudo chattr +C /var/log
+sudo chattr +C $HOME/.local/share/docker
+sudo chattr +C /var/lib/libvirt
 
 ### Script is done ###
 echo -e "$CNT - Script had completed!"
