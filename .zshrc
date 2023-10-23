@@ -117,18 +117,6 @@ alias dev="$HOME/.scripts/toggleDevEnv.sh"
 alias l="exa -la"
 
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
-export HF_DATASETS_CACHE="/home/kun/projects/AI/.cache/"
+export HF_DATASETS_CACHE="$HOME/projects/AI/.cache/"
 export EDITOR=/usr/bin/nvim
 export SYSTEMD_EDITOR=/usr/bin/nvim
-
-HELIX_RUNTIME=/home/kun/src/helix/runtime
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# bun completions
-[ -s "/home/kun/.bun/_bun" ] && source "/home/kun/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
