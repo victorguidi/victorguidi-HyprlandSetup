@@ -29,25 +29,24 @@ elif [[ ("$theme" == *'type-2'*) || ("$theme" == *'type-4'*) ]]; then
 fi
 
 # Options
-layout=$(cat ${theme} | grep 'USE_ICON' | cut -d'=' -f2)
 if [[ "$layout" == 'NO' ]]; then
 	if [[ ${status} == "Playing" ]]; then
-		option_1=" Pause"
+		option_1="▶ Pause"
 	else
-		option_1=" Play"
+		option_1="▶ Play"
 	fi
-	option_2=" Stop"
-	option_3=" Previous"
-	option_4=" Next"
+	option_2="■ Stop"
+	option_3="⏮ Previous"
+	option_4="⏭ Next"
 else
 	if [[ ${status} == "Playing" ]]; then
-		option_1=""
+		option_1="▶"
 	else
-		option_1=""
+		option_1="▶"
 	fi
-	option_2=""
-	option_3=""
-	option_4=""
+	option_2="■"
+	option_3="⏮"
+	option_4="⏭"
 fi
 
 # Rofi CMD
