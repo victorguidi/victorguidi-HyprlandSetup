@@ -112,7 +112,7 @@ source $ZSH/oh-my-zsh.sh
 eval "$(zoxide init zsh)"
 
 # --------------- Aliases ---------------------
-alias t=' if zellij list-sessions | grep -q main; then zellij a; else zellij -s main; fi'
+alias t=' if zellij list-sessions | grep -q main | grep -q EXITED; then zellij -s main; else zellij a main; fi'
 alias dev="$HOME/.scripts/toggleDevEnv.sh"
 alias l="exa -la"
 
