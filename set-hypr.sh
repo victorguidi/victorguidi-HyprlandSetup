@@ -60,6 +60,10 @@ install_stage=(
 	fzf
 	ncdu
 	procs
+	grex
+	tealdeer
+	hyperfine
+	tokei
 	gparted
 	ntfs-3g
 	ranger
