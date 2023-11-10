@@ -117,6 +117,8 @@ developer_stage=(
 	sshpass
 )
 
+SKIP=true
+
 for str in ${myArray[@]}; do
 	echo $str
 done
