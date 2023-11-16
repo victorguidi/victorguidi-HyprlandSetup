@@ -339,20 +339,21 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
 	cp -R ./.bgimages/ ~/
 	cp ./.zshrc ~/
 
-	# Install Oh-my-zsd
+	# Install Oh-my-zsd Better to do manually
 	# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+	# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+	#
+	# # Adding auto completion and syntax-highlighting
+	# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+	# git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+	#
+	# source $HOME/.zshrc
 
-	# Adding auto completion and syntax-highlighting
-	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
-	source $HOME/.zshrc
-
+	# Better to do manually
 	# Install Nodejs for nvim configuration and because you will probably need one day
-	asdf plugin add nodejs
-	asdf install nodejs latest
-	asdf global nodejs latest
+	# asdf plugin add nodejs
+	# asdf install nodejs latest
+	# asdf global nodejs latest
 
 	# add the Nvidia env file to the config (if needed)
 	if [[ "$ISNVIDIA" == true ]]; then
