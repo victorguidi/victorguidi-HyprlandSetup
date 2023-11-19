@@ -4,9 +4,9 @@ return {
   {
     "EdenEast/nightfox.nvim",
     priority = 1000, -- make sure to load this before all
-    config = function()
-      vim.cmd([[colorscheme terafox]])
-    end,
+    -- config = function()
+    --   vim.cmd([[colorscheme terafox]])
+    -- end,
   },
   {
     "nvim-lualine/lualine.nvim",
@@ -17,4 +17,14 @@ return {
     enabled = false,
   },
   { "folke/noice.nvim", enabled = false },
+  {
+    "craftzdog/solarized-osaka.nvim",
+    lazy = true,
+    priority = 1000,
+    opts = function()
+      return {
+        transparent = true,
+      }
+    end,
+  },
 }

@@ -41,6 +41,7 @@ install_stage=(
 	swww
 	swaylock-effects
 	rofi
+	wofi
 	wlogout
 	xdg-desktop-portal-hyprland
 	swappy
@@ -51,6 +52,7 @@ install_stage=(
 	mpv
 	pamixer
 	flatpak
+	chromium
 	pass
 	task
 	ripgrep
@@ -58,6 +60,11 @@ install_stage=(
 	zoxide
 	bat
 	fzf
+	tokei
+	hyperfine
+	tealdeer
+	dmidecode
+	dnsutils
 	ncdu
 	procs
 	grex
