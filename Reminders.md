@@ -11,7 +11,7 @@ Check if docker rootless is working:
 Finish configuring ASDF:
 - Add this to your .zshrc or .bashrc -> . "$HOME/.asdf/asdf.sh"
 
-Install a browser from flatpack after reboot
+Install a browser from flatpack after reboot in case the chromium package failed
   - flatpak install flathub com.brave.Browser
 
 
