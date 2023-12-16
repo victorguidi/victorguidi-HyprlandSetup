@@ -55,6 +55,7 @@ install_stage=(
 	chromium
 	pass
 	task
+	fd
 	ripgrep
 	exa
 	zoxide
@@ -74,6 +75,8 @@ install_stage=(
 	gparted
 	ntfs-3g
 	ranger
+	hyperfine
+	grex
 	xorg-xhost
 	timeshift
 	pavucontrol
@@ -94,6 +97,12 @@ install_stage=(
 	noto-fonts-cjk
 	noto-fonts-emoji
 	lxappearance
+	tcpdump
+	netcat
+	traceroute
+	ufw
+	xdg-desktop-portal-gtk
+	man-db
 	xfce4-settings
 	nwg-look-bin
 	sddm
