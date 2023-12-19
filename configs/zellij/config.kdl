@@ -9,7 +9,7 @@ keybinds {
         bind "Ctrl g" { SwitchToMode "Normal"; }
         bind "Ctrl p" { SwitchToMode "Pane"; }
         bind "Ctrl t" { SwitchToMode "Tab"; }
-        bind "Ctrl x" { SwitchToMode "Session"; }
+        bind "Ctrl q" { SwitchToMode "Session"; }
     }
     resize {
         bind "Ctrl n" { SwitchToMode "Normal"; }
