@@ -111,12 +111,33 @@ source $ZSH/oh-my-zsh.sh
 
 eval "$(zoxide init zsh)"
 
+## SSH stuff
+eval "$(keychain -q --eval --agents ssh id_rsa id_ed25519)"
+
 # --------------- Aliases ---------------------
-alias t=' if zellij list-sessions | grep -q main | grep -q EXITED; then zellij -s main; else zellij a main; fi'
+alias t='zellij a --create main'
 alias dev="$HOME/.scripts/toggleDevEnv.sh"
 alias l="exa -la"
+alias taskc="/usr/local/bin/taskCommit.sh commit"
 
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 export HF_DATASETS_CACHE="$HOME/projects/AI/.cache/"
 export EDITOR=/usr/bin/nvim
 export SYSTEMD_EDITOR=/usr/bin/nvim
+
+
+# bun completions
+[ -s "/home/kun/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+### ASDF STUFF
+. ~/.asdf/plugins/java/set-java-home.zsh
+
+
+
+#### PATHS
+export PATH=/opt/apache-maven-3.9.6/bin:$PATH
+
