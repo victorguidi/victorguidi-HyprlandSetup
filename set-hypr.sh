@@ -62,6 +62,7 @@ install_stage=(
 	bat
 	fzf
 	tokei
+	keychain
 	hyperfine
 	tealdeer
 	dmidecode
