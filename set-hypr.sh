@@ -108,6 +108,15 @@ install_stage=(
 	nwg-look-bin
 	sddm
 	hyprpicker-git
+	## Back wm stuff in case of emergency
+	awesome
+	arandr
+	xclip
+	rofi-greenclip
+	feh
+	autorandr
+	scrot
+	picom
 )
 
 #software for Virtualization
